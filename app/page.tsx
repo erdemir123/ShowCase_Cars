@@ -4,7 +4,8 @@ import SearchBar from "@/components/SearchBar";
 import Image from "next/image";
 import {fuels,yearsOfProduction} from "@/constant"
 
-export default function Home() {
+export default async function Home() {
+  const allCars = await  fer
   return (
     <div className="overflow-hidden">
       <Hero />
