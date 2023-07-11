@@ -5,6 +5,7 @@ import {fuels,yearsOfProduction} from "@/constant"
 import { fetchCars } from "@/utils";
 import { HomeProps } from "@/types";
 import CarCard from "@/components/CarCard";
+import ShowMore from "@/components/ShowMore";
 
 export default async function Home({ searchParams }: HomeProps) {
   const allCars = await fetchCars({
@@ -17,6 +18,7 @@ export default async function Home({ searchParams }: HomeProps) {
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
   console.log(allCars)
   console.log(isDataEmpty)
+  console.log(searchParams)
   return (
     <div className="overflow-hidden">
       <Hero />
@@ -41,10 +43,10 @@ export default async function Home({ searchParams }: HomeProps) {
               ))}
             </div>
 
-            {/* <ShowMore
+            <ShowMore
               pageNumber={(searchParams.limit || 10) / 10}
               isNext={(searchParams.limit || 10) > allCars.length}
-            /> */}
+            />
           </section>
         ) : (
           <div className='home__error-container'>
