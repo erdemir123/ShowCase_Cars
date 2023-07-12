@@ -27,6 +27,7 @@ export default function CustomButton({
             alt="arrow_left"
             fill
             className="object-contain"
+            id="rightIcon"
           />
         </div>
       )}
