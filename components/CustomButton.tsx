@@ -17,6 +17,7 @@ export default function CustomButton({
       type={btnType || "button"}
       className={`custom-btn ${containerStyles}`}
       onClick={handleClick}
+      id="customButton"
     >
       <span className={`flex-1 ${textStyles}`}>{title}</span>
       {rightIcon && (
